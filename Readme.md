@@ -1,7 +1,7 @@
 metacrunch-ubpb-transformations
 ===============================
 
-[![Code Climate](https://codeclimate.com/github/ubpb/metacrunch-ubpb-transformations/badges/gpa.svg)](https://codeclimate.com/github/ubpb/metacrunch-ubpb-transformations)
+[![Maintainability](https://api.codeclimate.com/v1/badges/374bba19f62874a277ba/maintainability)](https://codeclimate.com/github/ubpb/metacrunch-ubpb-transformations/maintainability)
 [![Build Status](https://travis-ci.org/ubpb/metacrunch-ubpb-transformations.svg)](https://travis-ci.org/ubpb/metacrunch-ubpb-transformations)
 
 A private collection of [metacrunch](https://github.com/ubpb/metacrunch) transformation routines used at [University Library of Paderborn](http://www.ub.uni-paderborn.de).
