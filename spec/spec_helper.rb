@@ -1,12 +1,14 @@
 require "pry" if !ENV["CI"]
-require "simplecov"
-require "metacrunch/ubpb/transformations"
 
-SimpleCov.start
+require "simplecov"
+SimpleCov.start do
+  add_filter %r{^/spec/}
+end
+
+require "metacrunch/ubpb/transformations"
 
 RSpec.configure do |config|
 end
-
 
 def marcxml_test(transformation_class, marcxml_string, expected_values = {})
   transformation = transformation_class.new
