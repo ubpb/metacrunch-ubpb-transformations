@@ -14,8 +14,9 @@ module Metacrunch::UBPB::Transformations
       data
     end
 
-    def perform
+    def transform
       # override in sub class
     end
+
   end
 end
