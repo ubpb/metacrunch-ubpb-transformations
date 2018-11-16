@@ -10,17 +10,14 @@ require "metacrunch/ubpb/transformations"
 RSpec.configure do |config|
 end
 
-def marcxml_test(transformation_class, marcxml_string, expected_values = {})
-  transformation = transformation_class.new
-  source = Metacrunch::Marcxml.parse(marcxml_string)
+def marcxml_test(marcxml, expected_values, transformation: described_class.new)
+  source = Metacrunch::Marcxml.parse(marcxml)
   target = {}
   data   = {source: source, target: target}
 
   expected_values.each_pair do |key, value|
     describe(key) do
-      subject {
-        transformation.call(data)[:target][key]
-      }
+      subject { transformation.call(data)[:target][key] }
 
       if value.is_a?(Proc)
         self.instance_eval(&value)
