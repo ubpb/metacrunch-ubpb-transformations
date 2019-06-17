@@ -14,4 +14,11 @@ describe Metacrunch::UBPB::Transformations::Marcxml::GetId do
     )
   end
 
+  context "SYS is empty" do
+    marcxml_test(
+      %{<controlfield tag="SYS"></controlfield>},
+      id: ""
+    )
+  end
+
 end
