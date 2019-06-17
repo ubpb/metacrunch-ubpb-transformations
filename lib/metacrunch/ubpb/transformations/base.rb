@@ -6,12 +6,12 @@ module Metacrunch::UBPB::Transformations
     attr_reader :target
 
     def call(data)
-      @source = data[:source]
-      @target = data[:target]
+      @source = data[:source].dup || {}
+      @target = data[:target].dup || {}
 
       self.transform
 
-      data
+      {source: @source, target: @target}
     end
 
     def transform
