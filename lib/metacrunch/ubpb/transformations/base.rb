@@ -15,7 +15,7 @@ module Metacrunch::UBPB::Transformations
     end
 
     def transform
-      # override in sub class
+      raise NotImplementedError, "Implement `#transform` in `#{self.class.name}`."
     end
 
   end
