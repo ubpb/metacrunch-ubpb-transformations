@@ -2,8 +2,6 @@ source "https://rubygems.org"
 
 gemspec
 
-gem "metacrunch-marcxml", "3.0", path: '../metacrunch-marcxml'
-
 group :development do
   gem "bundler", ">= 1.15"
   gem "rake",    ">= 12.1"
