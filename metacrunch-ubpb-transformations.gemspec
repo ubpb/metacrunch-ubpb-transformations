@@ -19,6 +19,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "activesupport",      ">= 0"
   spec.add_dependency "htmlentities",       "~> 4.3"
-  spec.add_dependency "metacrunch-marcxml", "~> 3.0"
+  spec.add_dependency "metacrunch-marcxml", "~> 3.1"
 end
 
