@@ -2,8 +2,14 @@ describe Metacrunch::UBPB::Transformations::Alma::HbzId do
 
   context "009 is available" do
     marcxml_test(
-      %{<controlfield tag="009">123456</controlfield>},
-      hbz_id: "123456"
+      %{
+        <record>
+          <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(DE-605)HT123456</subfield>
+          </datafield>
+        </record>
+      },
+      hbz_id: "HT123456"
     )
   end
 
