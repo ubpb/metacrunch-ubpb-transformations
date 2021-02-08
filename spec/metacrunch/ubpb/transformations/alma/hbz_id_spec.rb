@@ -9,14 +9,22 @@ describe Metacrunch::UBPB::Transformations::Alma::HbzId do
 
   context "009 is NOT available" do
     marcxml_test(
-      %{<controlfield tag="XXX"></controlfield>},
+      %{
+        <record>
+          <controlfield tag="XXX"></controlfield>
+        </record>
+      },
       hbz_id: nil
     )
   end
 
   context "009 is empty" do
     marcxml_test(
-      %{<controlfield tag="009"></controlfield>},
+      %{
+        <record>
+          <controlfield tag="009"></controlfield>
+        </record>
+      },
       hbz_id: nil
     )
   end
