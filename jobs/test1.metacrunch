@@ -1,0 +1,24 @@
+# Require dependencies from Gemfile
+Bundler.require
+
+# Require non option arguments that are available via ARGV.
+options(require_args: true) do ; end
+
+source Metacrunch::Marcxml.parse(
+  File.read(ARGV[0]),
+  collection_mode: true
+)
+
+transformation ->(document) do
+  {
+    source: document,
+    target: {}
+  }
+end
+
+transformation Metacrunch::UBPB::Transformations::Alma::Id.new
+transformation Metacrunch::UBPB::Transformations::Alma::HbzId.new
+
+transformation ->(data) do
+  puts data[:target]
+end
